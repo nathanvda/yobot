@@ -3,4 +3,5 @@ module Yobot
   end
 end
 
+require 'yobot/bot'
 require 'yobot/behaviors/ping_pong'
