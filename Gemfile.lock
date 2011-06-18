@@ -1,11 +1,3 @@
-PATH
-  remote: .
-  specs:
-    yobot (0.0.1)
-      eventmachine
-      firering
-      json
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -49,7 +41,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine
+  firering
   heroku
+  json
   rake
   rspec (>= 2.0)
-  yobot!

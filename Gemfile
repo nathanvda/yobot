@@ -1,3 +1,11 @@
 source "http://rubygems.org"
 
-gemspec
+gem 'eventmachine'
+gem 'firering'
+gem 'json'
+
+group :development do
+  gem 'rspec', '>=2.0'
+  gem 'rake'
+  gem 'heroku'
+end
