@@ -11,6 +11,9 @@ Gem::Specification.new do |s|
   s.version     = Yobot::VERSION
   s.platform    = Gem::Platform::RUBY
   
+  s.add_dependency 'eventmachine'
+  s.add_dependency 'firering'
+  
   s.add_development_dependency 'rspec', '>=2.0'
   s.add_development_dependency 'rake'
   

@@ -5,16 +5,16 @@ describe Yobot::Bot, 'on_message' do
     behavior = stub(:behavior)
     room = stub(:room)
     
-    behavior.should_receive(:message).with(room, 'ping')
+    behavior.should_receive(:react).with(room, 'ping')
     
-    Yobot::Bot.new(room, [behavior]).received_message('yobot ping')
+    Yobot::Bot.new([behavior]).received_message(room, 'yobot ping')
   end
   
   it "does nothing if the messae doesn't start with yobot" do
     behavior = stub(:behavior)
     
-    behavior.should_not_receive(:message)
+    behavior.should_not_receive(:react)
     
-    Yobot::Bot.new(stub, [behavior]).received_message('hello')
+    Yobot::Bot.new([behavior]).received_message(stub, 'hello')
   end
 end

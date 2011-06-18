@@ -1,13 +1,12 @@
 class Yobot::Bot
-  def initialize(room, behaviors)
-    @room = room
+  def initialize(behaviors)
     @behaviors = behaviors
   end
   
-  def received_message(message)
+  def received_message(room, message)
     if message =~ /^yobot/
       @behaviors.each do |behavior|
-        behavior.message @room, message.sub(/^yobot /, '')
+        behavior.react room, message.sub(/^yobot /, '')
       end
     end
   end
