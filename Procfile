@@ -1,0 +1,1 @@
+bot: ruby lib/yobot.rb
