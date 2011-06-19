@@ -22,7 +22,7 @@ task :run do
     c.max_retries = 10 # default to -1, which means perform connection retries on drop forever.
   end
 
-  bot = Yobot::Bot.new [Yobot::Behaviors::PingPong.new, Yobot::Behaviors::Dict.new]
+  bot = Yobot::Bot.new [Yobot::Behaviors::PingPong.new, Yobot::Behaviors::Dict.new, Yobot::Behaviors::Anaveda.new]
   
   EM.run do
     conn.authenticate do |user|
