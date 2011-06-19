@@ -1,6 +1,8 @@
 require 'rake'
 begin
-  require "rspec/core/rake_task"
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new(:spec)
 rescue LoadError
   STDERR.puts 'RSpec not installed. This is probably ok.'
 end
