@@ -4,7 +4,7 @@ Yobot is an extensible campfire bot. You can ask and tell it all kinds of things
 
 ### Installation
 
-To start just run `ruby lib/yobot.rb`
+To start just run `rake run`
 
 ### Behvaiors
 
@@ -13,8 +13,8 @@ Behaviors live in lib/yobot/behaviors. A behavior consists of at least one class
   class MyBehavior
 
     # reacts to a message in a chatroom (or not)
-    # room - a Yobot::Room
-    # message - a message written in the room
+    # room - a Firering::Room
+    # message - a text message written in the room (String)
     def react(room, message)
 
     end
@@ -29,7 +29,7 @@ Behaviors should read all the configuration they need (e.g. API credentials) fro
 ### Built-In behaviors
 
 * `ping` - `pong`
-* `dict <word>` - prints out the translation from dict.cc
+* `dict <word>` - prints out the translation from google translate
 * `bvg <from> to <to>` - prints out the next train from A to B via bvg.de (Berlin)
 * `weather <city>` - prints the weather forecast
 * `remind me 20:00 <title>` - will print out a reminder at the given time
