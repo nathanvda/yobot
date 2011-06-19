@@ -1,1 +1,1 @@
-bot: ruby lib/yobot.rb
+bot: rake run
