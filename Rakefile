@@ -1,5 +1,9 @@
 require 'rake'
-require "rspec/core/rake_task"
+begin
+  require "rspec/core/rake_task"
+rescue LoadError
+  STDERR.puts 'RSpec not installed. This is probably ok.'
+end
 
 task :default => :spec
 
