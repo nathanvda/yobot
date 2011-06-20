@@ -4,9 +4,9 @@ class Yobot::Bot
   end
   
   def received_message(room, message)
-    if message =~ /^yobot/
+    if message =~ /^yo/
       @behaviors.each do |behavior|
-        behavior.react room, message.sub(/^yobot /, '')
+        behavior.react room, message.sub(/^yo /, '')
       end
     end
   end
