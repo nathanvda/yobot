@@ -4,11 +4,11 @@ Yobot is an extensible campfire bot. You can ask and tell it all kinds of things
 
 ### Installation
 
-set ENV['CAMPFIRE\_LOGIN'], ENV['CAMPFIRE\_PASSWORD'] and ENV['CAMPFIRE\_SUBDOMAIN] to a vaid campfire account/site.
+set ENV['CAMPFIRE\_LOGIN'], ENV['CAMPFIRE\_PASSWORD'] and ENV['CAMPFIRE\_SUBDOMAIN] to a valid campfire account/site.
 
 To start just run `rake run`
 
-### Behvaiors
+### Behaviors
 
 Behaviors live in lib/yobot/behaviors. A behavior consists of at least one class that implements the following interface:
 
