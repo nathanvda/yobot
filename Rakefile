@@ -12,9 +12,9 @@ task :default => :spec
 task :run do
   require File.dirname(__FILE__) + '/lib/yobot'
   
-  login = api_key = 'yobot'
-  password = 'NlQC5XMsm@5qgzufc'
-  subdomain = 'upstream'
+  login = ENV['CAMPFIRE_LOGIN']
+  password = ENV['CAMPFIRE_PASSWORD']
+  subdomain = ENV['CAMPFIRE_SUBDOMAIN']
 
   conn = Firering::Connection.new("http://#{subdomain}.campfirenow.com") do |c|
     c.login = login
